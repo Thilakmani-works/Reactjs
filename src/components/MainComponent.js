@@ -4,6 +4,7 @@ import Header from './HeaderComponent';
 import Dishdetail from './DishdetailComponent';
 import Home from './HomeComponent';
 import Footer from './FooterComponent'
+import About from './AboutComponent';
 import { DISHES } from '../shared/dishes';
 import {LEADERS } from '../shared/leaders';
 import {COMMENTS} from '../shared/comments';
@@ -52,6 +53,7 @@ comments={this.state.comments.filter((comment) => comment.dishId === parseInt(ma
    <Route exact path="/menu" component={() => <Menu dishes ={this.state.dishes}/>}/>
    <Route path="/menu/:dishId" component={DishWithId} />
    <Route exact path="/contact" component={Contact}/>
+   <Route path="/aboutus" component ={() => <About leaders={this.state.leaders} />}/>
    <Redirect to="/home" />
  </Switch>
     <Footer />
